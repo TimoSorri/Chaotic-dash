@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Chaotic dash.unity
+    guid: 41240a1b4d3e00e40b56c633ee717575
   m_configObjects: {}
