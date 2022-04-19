@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SpawnManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public GameObject obstaclePrefabs;
     private Vector3 spawnPos = new Vector3(25, 0, 0);
@@ -15,15 +16,18 @@ public class SpawnManager : MonoBehaviour
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
-    void SpawnObstacle ()
+    void SpawnObstacle()
     {
         if (playerControllerScript.gameOver == false)
         {
             Instantiate(obstaclePrefabs, spawnPos, obstaclePrefabs.transform.rotation);
         }
     }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     void Update()
     {
-        
     }
 }
